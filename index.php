@@ -3,6 +3,7 @@ $servername = "localhost:3306";
 $username = "felixfin_user";
 $password = "*)q}({hr5#SQ";
 $dbname = "felixfin_homework3";
+//hallo
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);

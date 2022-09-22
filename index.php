@@ -1,7 +1,7 @@
 <?php
-$servername = "3306";
+$servername = "localhost:3306";
 $username = "felixfin_user";
-$password = "*)q}({hr5#SQ";
+$password = "O-,GXdw4e3QG";
 $dbname = "felixfin_homework3";
 //hallo
 

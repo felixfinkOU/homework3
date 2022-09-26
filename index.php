@@ -10,8 +10,8 @@
   </thead>
   <tbody>
     
-  <?php include 'server_connection.php';?>
-  
+    <?php include 'server_connection.php';?>
+
     <?php
 $sql = "SELECT Club, Standings FROM Teams";
 $result = $conn->query($sql);

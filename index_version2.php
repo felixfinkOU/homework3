@@ -1,19 +1,11 @@
 <?php include 'header.php';?>
 
-    <h1>Instructors</h1>
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>Name</th>
-    </tr>
-  </thead>
-  <tbody>
-    <?php
+<?php
 $servername = "localhost";
 $username = "felixfin_user2";
 $password = "O-,GXdw4e3QG";
 $dbname = "felixfin_homework3";
+//hallo
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -28,11 +20,13 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
+    // echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
 ?>
-  <tr>
-    <td><?=$row["Club"]?></td>
-    <td><?=$row["instructor_name"]?></td>
-  </tr>
+    <tr>
+        <td><?=$row["Club"]?></td>
+        <td><?=$row["Standings"]?></td>
+    </tr>
+
 <?php
   }
 } else {
@@ -40,7 +34,3 @@ if ($result->num_rows > 0) {
 }
 $conn->close();
 ?>
-  </tbody>
-    </table>
-
-<?php include 'footers.php';?>

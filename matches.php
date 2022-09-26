@@ -35,7 +35,11 @@ if ($result->num_rows > 0) {
 ?>
   <tr>
     <td><?=$row["MatchID"]?></td>
-    <td><a href="instructor-section.php?id=<?=$row["instructor_id"]?>"><?=$row["instructor_name"]?></a></td>
+    <td><?=$row["HomeTeam"]?></td>
+    <td><?=$row["AwayTeam"]?></td>
+    <td><?=$row["HomeTeamGoals"]?></td>
+    <td><?=$row["AwayTeamGoals"]?></td>
+    <td><?=$row["Matchday"]?></td>
   </tr>
 <?php
   }

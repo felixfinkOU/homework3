@@ -9,19 +9,10 @@
     </tr>
   </thead>
   <tbody>
+    
+  <?php include 'server_connection.php';?>
+  
     <?php
-$servername = "localhost";
-$username = "felixfin_user2";
-$password = "O-,GXdw4e3QG";
-$dbname = "felixfin_homework3";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
-
 $sql = "SELECT Club, Standings FROM Teams";
 $result = $conn->query($sql);
 
@@ -31,7 +22,7 @@ if ($result->num_rows > 0) {
 ?>
   <tr>
     <td><?=$row["Club"]?></td>
-    <td><?=$row["instructor_name"]?></td>
+    <td><?=$row["Standings"]?></td>
   </tr>
 <?php
   }

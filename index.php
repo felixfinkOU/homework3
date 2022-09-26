@@ -1,11 +1,11 @@
 <?php include 'header.php';?>
 
-    <h1>Instructors</h1>
+    <h1>Teams</h1>
 <table class="table table-striped">
   <thead>
     <tr>
-      <th>ID</th>
-      <th>Name</th>
+      <th>Club</th>
+      <th>Standings</th>
     </tr>
   </thead>
   <tbody>

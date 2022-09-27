@@ -7,9 +7,8 @@
       <th>MatchID</th>
       <th>HomeTeam</th>
       <th>AwayTeam</th>
-      <th>HomeTeamGoals</th>
-      <th>AwayTeamGoals</th>
-      <th>Matchday</th>
+      <th>HomeTeamCoach</th>
+      <th>AwayTeamCoach</th>
     </tr>
   </thead>
   <tbody>
@@ -28,7 +27,8 @@ if ($conn->connect_error) {
 
 $sql = "SELECT MatchID, HomeTeam, AwayTeam, s1.LastName as HomeTeamCoach, s2.LastName as AwayTeamCoach 
         from Matches m join SoccerManagers s1 on m.HomeTeam = s1.Club 
-        join SoccerManagers s2 on m.AwayTeam = s2.Club";
+        join SoccerManagers s2 on m.AwayTeam = s2.Club
+        order by MatchID";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {

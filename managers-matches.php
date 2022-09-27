@@ -1,15 +1,15 @@
 <?php include 'header.php';?>
 
-    <h1>Players</h1>
+    <h1>Matches</h1>
 <table class="table table-striped">
   <thead>
     <tr>
-      <th>PlayerID</th>
-      <th>FirstName</th>
-      <th>LastName</th>
-      <th>Club</th>
-      <th>Position</th>
-      <th>Nationality</th>
+      <th>MatchID</th>
+      <th>HomeTeam</th>
+      <th>AwayTeam</th>
+      <th>HomeTeamGoals</th>
+      <th>AwayTeamGoals</th>
+      <th>Matchday</th>
     </tr>
   </thead>
   <tbody>
@@ -26,7 +26,9 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT * from SoccerPlayers";
+$sql = "SELECT MatchID, HomeTeam, AwayTeam, s1.LastName as HomeTeamCoach, s2.LastName as AwayTeamCoach 
+        from Matches m join SoccerManagers s1 on m.HomeTeam = s1.Club 
+        join SoccerManagers s2 on m.AwayTeam = s2.Club";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -34,12 +36,11 @@ if ($result->num_rows > 0) {
   while($row = $result->fetch_assoc()) {
 ?>
   <tr>
-    <td><?=$row["PlayerID"]?></td>
-    <td><?=$row["FirstName"]?></td>
-    <td><?=$row["LastName"]?></td>
-    <td><?=$row["Club"]?></td>
-    <td><?=$row["Position"]?></td>
-    <td><?=$row["Nationality"]?></td>
+    <td><?=$row["MatchID"]?></td>
+    <td><?=$row["HomeTeam"]?></td>
+    <td><?=$row["AwayTeam"]?></td>
+    <td><?=$row["HomeTeamCoach"]?></td>
+    <td><?=$row["AwayTeamCoach"]?></td>
   </tr>
 <?php
   }

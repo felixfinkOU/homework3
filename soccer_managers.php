@@ -1,11 +1,22 @@
 <?php include 'header.php';?>
 
-<?php
+    <h1>Managers</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>CoachID</th>
+      <th>FirstName</th>
+      <th>LastName</th>
+      <th>Club</th>
+
+    </tr>
+  </thead>
+  <tbody>
+  <?php
 $servername = "localhost";
 $username = "felixfin_user2";
 $password = "O-,GXdw4e3QG";
 $dbname = "felixfin_homework3";
-//hallo
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -14,19 +25,19 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT Club, Standings FROM Teams";
+$sql = "SELECT * from SoccerManagers";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
-    // echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
 ?>
-    <tr>
-        <td><?=$row["Club"]?></td>
-        <td><?=$row["Standings"]?></td>
-    </tr>
-
+  <tr>
+    <td><?=$row["CoachID"]?></td>
+    <td><?=$row["FirstName"]?></td>
+    <td><?=$row["LastName"]?></td>
+    <td><?=$row["Club"]?></td>
+  </tr>
 <?php
   }
 } else {
@@ -34,3 +45,7 @@ if ($result->num_rows > 0) {
 }
 $conn->close();
 ?>
+  </tbody>
+    </table>
+
+<?php include 'footer.php';?>

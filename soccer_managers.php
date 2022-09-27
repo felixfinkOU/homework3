@@ -40,7 +40,7 @@ if ($result->num_rows > 0) {
     <td>
       <form method="post" action="managers-matches.php">
         <input type="hidden" name="id" value="<?=$row["LastName"]?>" />
-        <input type="submit" value="Matches" />
+        <input type="submit" value="m" />
       </form>
     </td>
   </tr>

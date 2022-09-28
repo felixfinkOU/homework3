@@ -27,7 +27,7 @@ if ($conn->connect_error) {
 }
 $cid = $_POST['position'];
 echo $cid;
-$sql = "SELECT * from SoccerPlayer where Position=$cid";
+$sql = "SELECT * from SoccerPlayer where Position=" . $cid;
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {

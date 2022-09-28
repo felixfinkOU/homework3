@@ -26,7 +26,6 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 $cid = $_POST['position'];
-print($cid)
 $sql = "SELECT * from SoccerPlayer where Position=".$cid;
 $result = $conn->query($sql);
 

@@ -26,8 +26,13 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-
-$sql = "SELECT * from Matches";
+$var = $_GET['Club']
+if (isset($var)) {
+    $sql = "SELECT * from Matches where HomeTeam='$var' OR AwayTeam='$var'";
+}
+else {
+    $sql = "SELECT * from Matches";
+}
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {

@@ -1,6 +1,9 @@
 <?php include 'header.php';?>
 
-    <h1>Teams</h1>
+<h1>Teams</h1>
+<div>
+<a class="btn btn-primary" type="button" href="matches.html">Show Matches</a>
+</div>
 <table class="table table-striped">
   <thead>
     <tr>

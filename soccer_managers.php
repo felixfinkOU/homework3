@@ -37,12 +37,6 @@ if ($result->num_rows > 0) {
     <td><?=$row["FirstName"]?></td>
     <td><?=$row["LastName"]?></td>
     <td><?=$row["Club"]?></td>
-    <td>
-      <form method="post" action="managers-matches.php">
-        <input type="hidden" name="id" value="<?=$row["LastName"]?>" />
-        <input type="submit" value="m" />
-      </form>
-    </td>
   </tr>
 <?php
   }

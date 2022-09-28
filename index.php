@@ -2,7 +2,7 @@
 
 <h1>Teams</h1>
 <div>
-<a class="btn btn-primary" type="button" href="matches.html">Show Matches</a>
+<a class="btn btn-primary" type="button" href="matches.php">Show Matches</a>
 </div>
 <table class="table table-striped">
   <thead>

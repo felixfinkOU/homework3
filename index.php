@@ -2,7 +2,10 @@
 
 <h1>Teams</h1>
 <div>
-<a class="btn btn-primary" type="button" href="matches.php">Show Matches</a>
+  <a class="btn btn-primary" type="button" href="matches.php">Show Matches</a>
+  <a class="btn btn-primary" type="button" href="soccer_managers.php">Show Managers</a>
+  <a class="btn btn-primary" type="button" href="soccer_players.php">Show Players</a>
+  <a class="btn btn-primary" type="button" href="managers-matches.php">Show Managers-Matches Join</a>
 </div>
 <table class="table table-striped">
   <thead>

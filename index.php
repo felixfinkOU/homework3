@@ -46,7 +46,7 @@ if ($result->num_rows > 0) {
   while($row = $result->fetch_assoc()) {
 ?>
   <tr>
-    <td><a href="matches.php?HomeTeam=<?=$row["Club"]?>"><?=$row["Club"]?></a></td>
+    <td><a href="matches.php?Team=<?=$row["Club"]?>"><?=$row["Club"]?></a></td>
     <!-- <td><?=$row["Club"]?></td> -->
     <td><?=$row["Standings"]?></td>
   </tr>

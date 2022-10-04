@@ -47,7 +47,6 @@ if ($result->num_rows > 0) {
 ?>
   <tr>
     <td><a href="matches.php?Team=<?=$row["Club"]?>"><?=$row["Club"]?></a></td>
-    <!-- <td><?=$row["Club"]?></td> -->
     <td><?=$row["Standings"]?></td>
   </tr>
 <?php

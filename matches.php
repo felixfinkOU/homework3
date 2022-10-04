@@ -27,7 +27,6 @@ if ($conn->connect_error) {
 }
 
 $var = $_GET['Team'];
-print($var);
 if (isset($var)) {
     $sql = "SELECT * from Matches where HomeTeam='$var' OR AwayTeam='$var'";
 }
@@ -57,5 +56,7 @@ $conn->close();
 ?>
   </tbody>
     </table>
+
+<a class="btn btn-primary" type="button" href="matches.php">Go Back</a>
 
 <?php include 'footer.php';?>

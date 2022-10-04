@@ -10,7 +10,7 @@
 <br></br>
 <div>
   <strong>Filter players by position:</strong>
-  <form action="filter_players.php" method="post">
+  <form action="soccer_players.php" method="post">
   Position: <input type="text" name="position"><br>
   <input type="submit">
   </form>

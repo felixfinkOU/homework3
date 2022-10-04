@@ -26,7 +26,13 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT * from SoccerPlayer";
+$var = $_POST['position'];
+if (isset($var)) {
+    $sql = "SELECT * from SoccerPlayer where Position='$var'";
+}
+else {
+    $sql = "SELECT * from SoccerPlayer";
+}
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {

@@ -48,4 +48,6 @@ $conn->close();
   </tbody>
     </table>
 
+<a class="btn btn-primary" type="button" href="index.php">Go Back</a>
+
 <?php include 'footer.php';?>

@@ -27,6 +27,7 @@ if ($conn->connect_error) {
 }
 
 $var = $_GET['Club'];
+print($var)
 if (isset($var)) {
     $sql = "SELECT * from Matches where HomeTeam='$var' OR AwayTeam='$var'";
 }

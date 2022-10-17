@@ -27,7 +27,7 @@ if ($result->num_rows > 0) {
       <h5 class="card-title"><?=$row["Club"]?></h5>
       <p class="card-text"><ul>
 <?php
-    $section_sql = "SELECT t.Standings, p.LastName, m.LastName FROM SoccerPlayer p join Teams t on t.Club = p.Club join SoccerManagers m on t.Club = m.Club WHERE t.Club=" . $row["Club"];
+    $section_sql = "SELECT t.Standings, p.LastName, m.LastName FROM SoccerPlayer p JOIN Teams t ON t.Club = p.Club JOIN SoccerManagers m on t.Club = m.Club WHERE t.Club=" . $row["Club"];
     $section_result = $conn->query($section_sql);
     
     while($section_row = $section_result->fetch_assoc()) {

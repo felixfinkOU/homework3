@@ -30,7 +30,7 @@ if ($result->num_rows > 0) {
     $section_sql = "select t.Standings, p.LastName, m.LastName
                     from SoccerPlayer p join Teams t on t.Club = p.Club
                                         join SoccerManagers m on t.Club = m.Club 
-                    where t.Club=" . $row["CLub"];
+                    where t.Club=" . $row["Club"];
     $section_result = $conn->query($section_sql);
     
     while($section_row = $section_result->fetch_assoc()) {

@@ -32,8 +32,8 @@ if ($result->num_rows > 0) {
     
     while($section_row = $section_result->fetch_assoc()) {
       echo "<li>" . $section_row["Standings"] . "</li>";
-      echo "<li>" . $section_row["Player"] . "</li>";
-      echo "<li>" . $section_row["Manager"] . "</li>";
+      echo "<li>" . $section_row["LastName"] . "</li>";
+      echo "<li>" . $section_row["LastName"] . "</li>";
     }
 ?>
       </ul></p>

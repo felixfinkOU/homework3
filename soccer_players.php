@@ -26,12 +26,12 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$var = $_POST['position'];
-if (isset($var)) {
-    $sql = "SELECT * from SoccerPlayer where Position='$var'";
+if (isset($_POST['position'])) {
+  $var = $_POST['position'];
+  $sql = "SELECT * from SoccerPlayer where Position='$var'";
 }
 else {
-    $sql = "SELECT * from SoccerPlayer";
+  $sql = "SELECT * from SoccerPlayer";
 }
 $result = $conn->query($sql);
 

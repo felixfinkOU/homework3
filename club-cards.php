@@ -46,7 +46,7 @@ if ($result->num_rows > 0) {
     var_dump($player_row);
     }
 
-    var_dump($Player_row);
+    var_dump($player_row);
 ?>
       </ul></p>
   </div>

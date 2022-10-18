@@ -41,10 +41,10 @@ if ($result->num_rows > 0) {
         while ($player_row = $result_player->fetch_assoc()) 
         {
                     echo "Player:" . $player_row["FirstName"] . $player_row["LastName"] . "<br>";
-        var_dump($player_row);
+        #var_dump($player_row);
         }
 
-        var_dump($player_row);
+        #var_dump($player_row);
     }
 
 ?>

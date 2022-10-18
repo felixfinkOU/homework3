@@ -1,6 +1,6 @@
 <?php include 'header.php';?>
 
-    <h1>Players</h1>
+    <h1>Clubs</h1>
 <div class="card-group">
     <?php
 $servername = "localhost";
@@ -22,7 +22,7 @@ if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
 ?>
-   <div class="card">
+   <div class="card" content="width=flex">
     <div class="card-body">
       <h5 class="card-title"><?=$row["Club"]?></h5>
       <p class="card-text"><ul>

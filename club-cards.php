@@ -22,7 +22,7 @@ if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
 ?>
-   <div class="card" content="width=flex">
+   <div class="card" content="width=500px">
     <div class="card-body">
       <h5 class="card-title"><?=$row["Club"]?></h5>
       <p class="card-text"><ul>
@@ -33,8 +33,8 @@ if ($result->num_rows > 0) {
     
     while($section_row = $section_result->fetch_assoc()) {
       echo "<li>" . $section_row["Standings"] . "</li>";
-      echo "<li>" . $section_row["Player"] . "</li>";
-      echo "<li>" . $section_row["Manager"] . "</li>";
+      #echo "<li>" . $section_row["Player"] . "</li>";
+      #echo "<li>" . $section_row["Manager"] . "</li>";
     }
 ?>
       </ul></p>

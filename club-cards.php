@@ -22,7 +22,7 @@ if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
 ?>
-   <div class="card" style="width: 500px, overflow: scroll">
+   <div class="card" style="width: 500px;">
     <div class="card-body">
       <h5 class="card-title"><?=$row["Club"]?></h5>
       <p class="card-text"><ul>

@@ -1,7 +1,7 @@
 <?php include 'header.php';?>
 
     <h1>Clubs</h1>
-<div class="card-group">
+<div class="card-group" style="overflow:scroll;">
     <?php
 $servername = "localhost";
 $username = "felixfin_user2";
@@ -22,7 +22,7 @@ if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
 ?>
-   <div class="card" style="width: 500px;">
+   <div class="card" style="min-width:10%;">
     <div class="card-body">
       <h5 class="card-title"><?=$row["Club"]?></h5>
       <p class="card-text"><ul>

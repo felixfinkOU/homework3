@@ -40,7 +40,7 @@ if ($result->num_rows > 0) {
 
         while ($player_row = $result_player->fetch_assoc()) 
         {
-                    echo "Player:" . $player_row["FirstName"] . $player_row["LastName"] . "<br>";
+                    echo "<li>" . "Player: " . $player_row["FirstName"] . " " . $player_row["LastName"] . "</li>";
         #var_dump($player_row);
         }
 

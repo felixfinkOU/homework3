@@ -27,13 +27,13 @@ if ($result->num_rows > 0) {
       <h5 class="card-title"><?=$row["Club"]?></h5>
       <p class="card-text"><ul>
 <?php
-    $section_sql = "SELECT t.Standings, p.LastName, m.LastName FROM SoccerPlayer as p JOIN Teams as t ON t.Club = p.Club JOIN SoccerManagers as m ON t.Club = m.Club WHERE t.Club=".$row["Club"];
+    $section_sql = "SELECT t.Standings, p.LastName, m.LastName FROM SoccerPlayer as p INNER JOIN Teams as t ON t.Club = p.Club INNER JOIN SoccerManagers as m ON t.Club = m.Club WHERE t.Club=".$row["Club"];
     $section_result = $conn->query($section_sql);
     
     while($section_row = $section_result->fetch_assoc()) {
       echo "<li>" . $section_row["Standings"] . "</li>";
-      #echo "<li>" . $section_row["Player"] . "</li>";
-      #echo "<li>" . $section_row["Manager"] . "</li>";
+      echo "<li>" . $section_row["Player"] . "</li>";
+      echo "<li>" . $section_row["Manager"] . "</li>";
     }
 ?>
       </ul></p>

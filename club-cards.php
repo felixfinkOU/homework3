@@ -1,7 +1,7 @@
 <?php include 'header.php';?>
 
     <h1>Clubs</h1>
-<div class="card-group" style="width=1000px, overflow=scroll">
+<div class="card-group" content="width=1000px, overflow=scroll">
     <?php
 $servername = "localhost";
 $username = "felixfin_user2";

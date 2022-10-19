@@ -32,12 +32,9 @@ if ($result->num_rows > 0) {
     $section_result = $conn->query($section_sql);
     
     while($section_row = $section_result->fetch_assoc()) {
-      if ($section_row["Standings"] != 0) {
-        echo "<li>" . "<b>" . "Standings: " . "</b>" . $section_row["Standings"] . "</li>";
-      }
-      if ($section_row["mFirstName"] != null) {
-        echo "<li>" . "<b>" . "Manager: " . "</b>" . $section_row["mFirstName"] . " " . $section_row["mLastName"] . "</li>";
-      }
+      echo "<li>" . "<b>" . "Standings: " . "</b>" . $section_row["Standings"] . "</li>";
+      echo "<li>" . "<b>" . "Manager: " . "</b>" . $section_row["mFirstName"] . " " . $section_row["mLastName"] . "</li>";
+        
       $sql_player = "SELECT FirstName, LastName FROM SoccerPlayer WHERE Club='$var'";
       $result_player = $conn->query($sql_player);
 

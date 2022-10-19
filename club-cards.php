@@ -28,7 +28,7 @@ if ($result->num_rows > 0) {
       <p class="card-text"><ul>
 <?php
     $var = $row['Club'];
-    $section_sql = "SELECT t.Standings, m.FirstName as mFirstName, m.LastName as mLastName FROM Teams as t JOIN SoccerManagers as m ON t.Club = m.Club WHERE t.Club='$var' GROUP BY t.Club";
+    $section_sql = "SELECT t.Standings, m.FirstName as mFirstName, m.LastName as mLastName FROM Teams as t LEFT JOIN SoccerManagers as m ON t.Club = m.Club WHERE t.Club='$var' GROUP BY t.Club";
     $section_result = $conn->query($section_sql);
     
     while($section_row = $section_result->fetch_assoc()) {

@@ -28,23 +28,20 @@ if ($result->num_rows > 0) {
       <p class="card-text"><ul>
 <?php
     $var = $row['Club'];
-    $section_sql = "SELECT t.Standings, p.LastName as Player, m.LastName as Manager FROM SoccerPlayer as p JOIN Teams as t ON p.Club = t.Club JOIN SoccerManagers as m ON t.Club = m.Club WHERE t.Club='$var' GROUP BY t.Club";
+    $section_sql = "SELECT t.Standings, m.FirstName as mFirstName, m.LastName as mLastName FROM Teams as t JOIN SoccerManagers as m ON t.Club = m.Club WHERE t.Club='$var' GROUP BY t.Club";
     $section_result = $conn->query($section_sql);
     
     while($section_row = $section_result->fetch_assoc()) {
-      echo "<li>" . $section_row["Standings"] . "</li>";
-      #echo "<li>" . $section_row["Player"] . "</li>";
-      echo "<li>" . $section_row["Manager"] . "</li>";
+      echo "<li>" . "<b>" . "Standings: " . "</b>" . $section_row["Standings"] . "</li>";
+      echo "<li>" . "<b>" . "Manager: " . "</b>" . $section_row["Manager"] . $section_row["Manager"] . "</li>";
+        
         $sql_player = "SELECT FirstName, LastName FROM SoccerPlayer WHERE Club='$var'";
         $result_player = $conn->query($sql_player);
 
         while ($player_row = $result_player->fetch_assoc()) 
         {
-                    echo "<li>" . "Player: " . $player_row["FirstName"] . " " . $player_row["LastName"] . "</li>";
-        #var_dump($player_row);
+                    echo "<li>" . "<b>" . "Player: " . "</b>" . $player_row["FirstName"] . " " . $player_row["LastName"] . "</li>";
         }
-
-        #var_dump($player_row);
     }
 
 ?>

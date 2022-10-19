@@ -33,7 +33,7 @@ if ($result->num_rows > 0) {
     
     while($section_row = $section_result->fetch_assoc()) {
       echo "<li>" . "<b>" . "Standings: " . "</b>" . $section_row["Standings"] . "</li>";
-      echo "<li>" . "<b>" . "Manager: " . "</b>" . $section_row["Manager"] . $section_row["Manager"] . "</li>";
+      echo "<li>" . "<b>" . "Manager: " . "</b>" . $section_row["mFirstName"] . $section_row["mLastName"] . "</li>";
         
         $sql_player = "SELECT FirstName, LastName FROM SoccerPlayer WHERE Club='$var'";
         $result_player = $conn->query($sql_player);

@@ -60,4 +60,4 @@ $conn->close();
   </tbody>
     </table>
 
-<?php include 'footers.php';?>
+<?php include 'footer.php';?>

@@ -32,7 +32,7 @@ if ($result->num_rows > 0) {
     $section_result = $conn->query($section_sql);
     
     while($section_row = $section_result->fetch_assoc()) {
-      if ($section_row["Standings"] != null) {
+      if ($section_row["Standings"] != 0) {
         echo "<li>" . "<b>" . "Standings: " . "</b>" . $section_row["Standings"] . "</li>";
       }
       if ($section_row["mFirstName"] != null) {
